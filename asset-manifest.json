@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react_twitter_influencers/static/css/main.21544021.css",
+    "main.js": "/react_twitter_influencers/static/js/main.5654e520.js",
+    "static/media/kanyewest.jpg": "/react_twitter_influencers/static/media/kanyewest.e064b858e2912a86c09b.jpg",
+    "static/media/beyonce.jpg": "/react_twitter_influencers/static/media/beyonce.e846bfc30f6974975757.jpg",
+    "static/media/nanokaffeeberlin.jpg": "/react_twitter_influencers/static/media/nanokaffeeberlin.108915122a213b0cefed.jpg",
+    "static/media/jxhannamadeleine.jpg": "/react_twitter_influencers/static/media/jxhannamadeleine.9a8f039a85814ca3ea81.jpg",
+    "static/media/saschafirtina.jpg": "/react_twitter_influencers/static/media/saschafirtina.4e4aed933cf894297bd9.jpg",
+    "static/media/marin.ivankovic.jpg": "/react_twitter_influencers/static/media/marin.ivankovic.5cba23521f1206ea3117.jpg",
+    "static/media/chapteronecoffeeberlin.jpg": "/react_twitter_influencers/static/media/chapteronecoffeeberlin.7daa0582f46e248efd45.jpg",
+    "static/media/bluemaex.jpg": "/react_twitter_influencers/static/media/bluemaex.932f72cfa4e2e6c6f09e.jpg",
+    "static/media/icon-follow.svg": "/react_twitter_influencers/static/media/icon-follow.8a9d531f23ce3d7fe50242378231cc88.svg",
+    "index.html": "/react_twitter_influencers/index.html",
+    "main.21544021.css.map": "/react_twitter_influencers/static/css/main.21544021.css.map",
+    "main.5654e520.js.map": "/react_twitter_influencers/static/js/main.5654e520.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.21544021.css",
+    "static/js/main.5654e520.js"
+  ]
+}
