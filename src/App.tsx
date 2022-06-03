@@ -1,26 +1,30 @@
-import { useState, useEffect } from "react";
+import { useState, FC, useEffect, useCallback, useMemo } from "react";
 import "./App.css";
 import FollowList from "./components/FollowList";
+import { IPost } from "./components/InterfaceTypes";
 import followers from "./resources/follower-suggestions.json";
 
-function App() {
-  const postsPerPage = 10;
-  let arrayForHoldingPosts = [];
+const App: FC = () => {
+  const postsPerPage: number = 10;
+  let arrayForHoldingPosts: IPost[] = useMemo(() => [], []);
 
-  const [postsToShow, setPostsToShow] = useState([]);
-  const [next, setNext] = useState(3);
+  const [postsToShow, setPostsToShow] = useState<IPost[]>([]);
+  const [next, setNext] = useState<number>(3);
 
-  const loopWithSlice = (start, end) => {
-    const slicedPosts = followers.slice(start, end);
-    arrayForHoldingPosts.push(...slicedPosts);
-    setPostsToShow(arrayForHoldingPosts);
-  };
+  const loopWithSlice = useCallback(
+    (start: number, end: number): void => {
+      const slicedPosts: IPost[] = followers.slice(start, end);
+      arrayForHoldingPosts.push(...slicedPosts);
+      setPostsToShow(arrayForHoldingPosts);
+    },
+    [arrayForHoldingPosts]
+  );
 
   useEffect(() => {
     loopWithSlice(0, postsPerPage);
-  }, []);
+  }, [loopWithSlice]);
 
-  const handleShowMorePosts = () => {
+  const handleShowMorePosts = (): void => {
     loopWithSlice(next, next + postsPerPage);
     setNext(next + postsPerPage);
   };
@@ -40,6 +44,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

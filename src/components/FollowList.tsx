@@ -1,17 +1,23 @@
 import { useState } from "react";
 import "./css/my_styles.css";
 import { ReactComponent as FollowIcon } from "../resources/assets/icon-follow.svg";
+import { IPost } from "./InterfaceTypes";
 
-const FollowList = ({ influencer }) => {
-  const [isFollowed, setIsFollowed] = useState(false);
+interface Props {
+  influencer: IPost;
+}
 
-  const follow = (id) => {
+const FollowList = ({ influencer }: Props) => {
+  const [isFollowed, setIsFollowed] = useState<boolean>(false);
+
+  const follow = (): void => {
     setIsFollowed(!isFollowed);
   };
 
-  const unFollow = (id) => {
+  const unFollow = (): void => {
     setIsFollowed(!isFollowed);
   };
+
   return (
     <div className="influencer">
       <div className="desc">
@@ -26,17 +32,11 @@ const FollowList = ({ influencer }) => {
         </div>
       </div>
       {isFollowed ? (
-        <button
-          className="following-button"
-          onClick={() => unFollow(influencer.userId)}
-        >
+        <button className="following-button" onClick={() => unFollow()}>
           Following
         </button>
       ) : (
-        <button
-          className="follow-button"
-          onClick={() => follow(influencer.userId)}
-        >
+        <button className="follow-button" onClick={() => follow()}>
           <FollowIcon className="follow-icon" />
           Follow
         </button>
