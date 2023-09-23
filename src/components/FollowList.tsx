@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./css/my_styles.css";
-import { ReactComponent as FollowIcon } from "../resources/assets/icon-follow.svg";
 import { IPost } from "./InterfaceTypes";
 
 interface Props {
@@ -37,7 +36,7 @@ const FollowList = ({ influencer }: Props) => {
         </button>
       ) : (
         <button className="follow-button" onClick={() => follow()}>
-          <FollowIcon className="follow-icon" />
+          {/* <FollowIcon className="follow-icon" /> */}
           Follow
         </button>
       )}
